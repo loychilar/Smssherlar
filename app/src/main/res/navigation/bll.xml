@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bll"
+    app:startDestination="@id/ikkinchiFragment">
+
+    <fragment
+        android:id="@+id/birinchiFragment"
+        android:name="com.example.smmsherlar.birinchiFragment"
+        android:label="fragment_birinchi"
+        tools:layout="@layout/fragment_birinchi" >
+        <action
+            android:id="@+id/action_birinchiFragment_to_uchinchiFragment"
+            app:destination="@id/uchinchiFragment" />
+        <action
+            android:id="@+id/action_birinchiFragment_self"
+            app:destination="@id/birinchiFragment" />
+        <action
+            android:id="@+id/action_birinchiFragment_to_ikkinchiFragment"
+            app:destination="@id/ikkinchiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ikkinchiFragment"
+        android:name="com.example.smmsherlar.ikkinchiFragment"
+        android:label="fragment_ikkinchi"
+        tools:layout="@layout/fragment_ikkinchi" >
+        <action
+            android:id="@+id/action_ikkinchiFragment_to_birinchiFragment"
+            app:destination="@id/birinchiFragment" />
+        <action
+            android:id="@+id/action_ikkinchiFragment_to_uchinchiFragment2"
+            app:destination="@id/uchinchiFragment" />
+        <action
+            android:id="@+id/action_ikkinchiFragment_to_uchinchiFragment"
+            app:destination="@id/uchinchiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/uchinchiFragment"
+        android:name="com.example.smmsherlar.uchinchiFragment"
+        android:label="fragment_uchinchi"
+        tools:layout="@layout/fragment_uchinchi" >
+        <action
+            android:id="@+id/action_uchinchiFragment_to_birinchiFragment"
+            app:destination="@id/birinchiFragment" />
+        <action
+            android:id="@+id/action_uchinchiFragment_to_ikkinchiFragment"
+            app:destination="@id/ikkinchiFragment" />
+    </fragment>
+</navigation>
